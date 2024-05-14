@@ -36,21 +36,20 @@
 
 ## Usage
 
-1. Download the color config from this repo inside `config` folder
-2. Open MobaXterm application.
-3. Go to Navigation bar > `Settings` > `Configuration` > `Terminal` tabs
-4. Click on `Default terminal color settings`.
-5. Click on `Import a color theme from a file` icon
-6. Select the color config accordingly (*\<catppuccin-xxxxx.mxtcolors\>*).
-7. Restart MobaXterm application
+1. Download the flavor of your choice from [`themes/`](./themes/).
+2. Go to **Settings** > **Configuration** > **Terminal** inside MobaXterm.
+3. Click on **Default terminal color settings** > **Import a color theme from a file**.
+4. Select the theme file downloaded in Step 1.
+5. Restart MobaXterm.
 
-### OR
+### Manually
 
-1. Open Windows Run dialog `(Windows+R)`.
-2. Type `shell:appdata\MobaXterm` in the dialog box.
-3. Edit the `MobaXterm.ini`, replace the `[Colors]` section using the config *\<catppuccin-xxxxx.mxtcolors\>*
+1. Open the Run dialog with <kbd>Win</kbd>+<kbd>R</kbd>.
+2. Enter `shell:appdata\MobaXterm` into the dialog.
+3. Edit the `MobaXterm.ini` file, replacing the `[Colors]` section with the configuration from your theme file of choice.
 
-NOTE: Make sure MobaXterm application is not running when you change the config by editing the `MobaXterm.ini`
+> [!IMPORTANT]
+> Make sure MobaXterm is not running when you edit the `MobaXterm.ini` configuration file.
 
 ## 💝 Thanks to
 
