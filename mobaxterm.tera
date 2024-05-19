@@ -1,0 +1,46 @@
+---
+whiskers:
+  version: 2.1.0
+  matrix:
+    - flavor
+  filename: "themes/catppuccin-{{ flavor.identifier }}.mxtcolors"
+---
+
+{%- macro rgb(color) -%}
+{{ color.rgb.r }},{{ color.rgb.g }},{{ color.rgb.b }}
+{%- endmacro -%}
+
+{%- set palette = flavor.colors -%}
+
+[Colors]
+DefaultColorScheme=4
+{%- if flavor.dark %}
+Black={{ self::rgb(color=palette.surface1) }}
+BoldBlack={{ self::rgb(color=palette.surface2) }}
+{%- else %}
+Black={{ self::rgb(color=palette.subtext1) }}
+BoldBlack={{ self::rgb(color=palette.subtext0) }}
+{%- endif %}
+Red={{ self::rgb(color=palette.red) }}
+BoldRed={{ self::rgb(color=palette.red) }}
+Green={{ self::rgb(color=palette.green) }}
+BoldGreen={{ self::rgb(color=palette.green) }}
+Yellow={{ self::rgb(color=palette.yellow) }}
+BoldYellow={{ self::rgb(color=palette.yellow) }}
+Blue={{ self::rgb(color=palette.blue) }}
+BoldBlue={{ self::rgb(color=palette.blue) }}
+Magenta={{ self::rgb(color=palette.pink) }}
+BoldMagenta={{ self::rgb(color=palette.pink) }}
+Cyan={{ self::rgb(color=palette.teal) }}
+BoldCyan={{ self::rgb(color=palette.teal) }}
+{%- if flavor.dark %}
+White={{ self::rgb(color=palette.subtext1) }}
+BoldWhite={{ self::rgb(color=palette.subtext0) }}
+{%- else %}
+White={{ self::rgb(color=palette.surface2) }}
+BoldWhite={{ self::rgb(color=palette.surface1) }}
+{%- endif %}
+ForegroundColour={{ self::rgb(color=palette.text) }}
+BackgroundColour={{ self::rgb(color=palette.base) }}
+CursorColour={{ self::rgb(color=palette.rosewater) }}
+SyntaxType=1
